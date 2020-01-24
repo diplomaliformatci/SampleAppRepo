@@ -1,0 +1,6 @@
+framework module Pods_SampleModelPassing {
+  umbrella header "Pods-SampleModelPassing-umbrella.h"
+
+  export *
+  module * { export * }
+}
