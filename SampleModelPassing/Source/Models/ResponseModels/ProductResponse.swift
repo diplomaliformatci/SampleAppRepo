@@ -8,11 +8,10 @@
 
 import Foundation
 
-
 struct Product: Decodable {
     let id: String
     let category: String
     let name: String
     let price: String
-    let iamge: String
+    let image: String
 }
