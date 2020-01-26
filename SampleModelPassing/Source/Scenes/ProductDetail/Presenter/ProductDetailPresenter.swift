@@ -8,14 +8,6 @@
 
 import Foundation
 
-protocol ProductDetailPresenterDelegate: class {
-    func fetchProductDetail()
-}
-
-protocol ProductDetailViewDelegate: class {
-    func showProductDetail(product: ProductModel)
-}
-
 final class ProductDetailPresenter {
     unowned var view: ProductDetailViewDelegate?
     var product: ProductModel

@@ -8,16 +8,6 @@
 
 import Foundation
 
-protocol ProductsPresenterDelegate: class {
-    func product(with indexPath: IndexPath, result: (_ product: ProductModel) -> ())
-    func getProducts()
-}
-
-protocol ProductsViewDelegate: class {
-    func showProducts(products: [ProductModel])
-    func showError(error: String)
-}
-
 final class ProductsPresenter {
     unowned var view: ProductsViewDelegate!
     var products: [ProductModel]? {

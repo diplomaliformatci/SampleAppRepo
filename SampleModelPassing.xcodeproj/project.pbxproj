@@ -42,6 +42,8 @@
 		346979FB23DB62D100AE27D4 /* SampleModelPassingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346979FA23DB62D100AE27D4 /* SampleModelPassingTests.swift */; };
 		34BE56C023DB76A6005DBD56 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BE56BE23DB76A6005DBD56 /* ProductsViewController.swift */; };
 		34BE56C123DB76A6005DBD56 /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34BE56BF23DB76A6005DBD56 /* ProductsViewController.xib */; };
+		34C7047F23DDCC0C0071AE65 /* ProductsViewContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C7047E23DDCC0C0071AE65 /* ProductsViewContracts.swift */; };
+		34C7048123DDCC500071AE65 /* ProductDetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C7048023DDCC500071AE65 /* ProductDetailContracts.swift */; };
 		3CE1D38C1538D5D15D0A4B71 /* Pods_SampleModelPassingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156EF4DEA5E5EACB1C160FF0 /* Pods_SampleModelPassingTests.framework */; };
 		5CA9ED1CE00D1B78CDB4E715 /* Pods_SampleModelPassing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F145AE23BB348B1CD0FD5916 /* Pods_SampleModelPassing.framework */; };
 /* End PBXBuildFile section */
@@ -97,6 +99,8 @@
 		346979FC23DB62D100AE27D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34BE56BE23DB76A6005DBD56 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		34BE56BF23DB76A6005DBD56 /* ProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsViewController.xib; sourceTree = "<group>"; };
+		34C7047E23DDCC0C0071AE65 /* ProductsViewContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewContracts.swift; sourceTree = "<group>"; };
+		34C7048023DDCC500071AE65 /* ProductDetailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailContracts.swift; sourceTree = "<group>"; };
 		781D909DB8D53C07691E26B3 /* Pods-SampleModelPassingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleModelPassingTests.release.xcconfig"; path = "Target Support Files/Pods-SampleModelPassingTests/Pods-SampleModelPassingTests.release.xcconfig"; sourceTree = "<group>"; };
 		903D0315DF76867DDA55639E /* Pods-SampleModelPassing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleModelPassing.debug.xcconfig"; path = "Target Support Files/Pods-SampleModelPassing/Pods-SampleModelPassing.debug.xcconfig"; sourceTree = "<group>"; };
 		DD1F3C335366DDE13E271255 /* Pods-SampleModelPassing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleModelPassing.release.xcconfig"; path = "Target Support Files/Pods-SampleModelPassing/Pods-SampleModelPassing.release.xcconfig"; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				34108B0323DCB5B200BB800D /* ProductsViewBuilder.swift */,
+				34C7047E23DDCC0C0071AE65 /* ProductsViewContracts.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				34108B0E23DCC79100BB800D /* ProductDetailBuilder.swift */,
+				34C7048023DDCC500071AE65 /* ProductDetailContracts.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -600,6 +606,7 @@
 				346979E423DB62CF00AE27D4 /* AppDelegate.swift in Sources */,
 				34108B2223DD129F00BB800D /* UIViewController++.swift in Sources */,
 				34108B1523DCF3F700BB800D /* UIColor++.swift in Sources */,
+				34C7047F23DDCC0C0071AE65 /* ProductsViewContracts.swift in Sources */,
 				34108AD723DB83DC00BB800D /* ImageView++.swift in Sources */,
 				34108B0123DCA96600BB800D /* ProductModels.swift in Sources */,
 				34108B0423DCB5B200BB800D /* ProductsViewBuilder.swift in Sources */,
@@ -613,6 +620,7 @@
 				34108B0C23DCC48E00BB800D /* ProductDetailPresenter.swift in Sources */,
 				34108B1323DCF3DD00BB800D /* UITableViewCell++.swift in Sources */,
 				344BA04423DB7B3B0047B9DB /* ProductTableViewCell.swift in Sources */,
+				34C7048123DDCC500071AE65 /* ProductDetailContracts.swift in Sources */,
 				34108AD423DB838000BB800D /* GenericTableViewDataSource.swift in Sources */,
 				34108AE623DC508B00BB800D /* NetworkFetch.swift in Sources */,
 				34BE56C023DB76A6005DBD56 /* ProductsViewController.swift in Sources */,

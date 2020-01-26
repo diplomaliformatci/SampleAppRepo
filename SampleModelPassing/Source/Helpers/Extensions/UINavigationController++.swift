@@ -12,10 +12,4 @@ extension UINavigationController {
     func setNavigationBarColor(to color: UIColor) {
         navigationBar.tintColor = color
     }
-    
-    func setPlainBackButton(with color: UIColor) {
-        let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        backButton.tintColor = color
-        self.navigationItem.backBarButtonItem = backButton
-    }
 }
