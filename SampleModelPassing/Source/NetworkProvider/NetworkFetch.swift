@@ -17,7 +17,7 @@ struct NetworkFetch<T: Decodable> {
     }
     
     func fetchData(from endpoint: EndpointType,
-                   completed: @escaping (_ data: T, _ statusCode: Int, _ error: String) -> ()) {
+                   completed: @escaping (_ data: T?, _ statusCode: Int, _ error: String) -> ()) {
         
         guard let url = endpoint.getUrl else { return }
         
@@ -25,14 +25,12 @@ struct NetworkFetch<T: Decodable> {
             guard
                 let data = data,
                 let response = response as? HTTPURLResponse,
-                let result = self.parseData(data: data) else { return }
+                let result = self.parseData(data: data) else { completed(nil, 0, "Network Error"); return }
 
             completed(result, response.statusCode, "")
         }
         task.resume()
     }
-    
-    
     
     func parseData(data: Data) -> T? {
         var result: T?

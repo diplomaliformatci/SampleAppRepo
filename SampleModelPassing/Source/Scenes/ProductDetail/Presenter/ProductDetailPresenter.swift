@@ -39,6 +39,7 @@ extension ProductDetailPresenter: ProductDetailPresenterDelegate {
         NetworkFetch<Product>().fetchData(from: ProductEndpoint.fetchProductDetail(productId: product.id)) { [weak self] (product, statusCode, error) in
             switch statusCode {
             case 200:
+                guard let product = product else { return }
                 self?.showProduct(product: ProductModel(product: product))
             default:
                 break

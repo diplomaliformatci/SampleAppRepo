@@ -15,7 +15,7 @@ protocol ProductsPresenterDelegate: class {
 
 protocol ProductsViewDelegate: class {
     func showProducts(products: [ProductModel])
-    func showError()
+    func showError(error: String)
 }
 
 final class ProductsPresenter {
@@ -32,7 +32,9 @@ final class ProductsPresenter {
     
     private func showProducts() {
         guard let products = self.products else { return }
-        view.showProducts(products: products)
+        DispatchQueue.main.async { [weak self] in
+            self?.view.showProducts(products: products)
+        }
     }
 }
 
@@ -47,9 +49,12 @@ extension ProductsPresenter: ProductsPresenterDelegate {
             guard let self = self else { return }
             switch statusCode {
             case 200:
+                guard let products = products else { return }
                 self.products = products.compactMap{ ProductModel(product: $0) }
             default:
-                self.view.showError()
+                DispatchQueue.main.async {
+                    self.view.showError(error: error)                    
+                }
             }
         }
     }

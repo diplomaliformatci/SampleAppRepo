@@ -9,15 +9,12 @@
 import UIKit
 
 final class ProductsViewBuilder {
-    class func make() -> UINavigationController {
+    class func make() -> ProductsViewController {
         let controller = ProductsViewController()
         let presenter =  ProductsPresenter(view: controller)
         
         controller.presenter = presenter
         
-        let navigationController = UINavigationController(rootViewController: controller)
-        navigationController.setNavigationBarHidden(true, animated: false)
-        
-        return navigationController
+        return controller
     }
 }

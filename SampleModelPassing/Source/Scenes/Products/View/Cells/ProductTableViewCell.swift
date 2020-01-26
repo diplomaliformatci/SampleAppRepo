@@ -9,7 +9,6 @@
 import UIKit
 
 class ProductTableViewCell: UITableViewCell {
-    
     @IBOutlet private weak var thumbImageView: UIImageView!
     @IBOutlet private weak var categoryLabel: UILabel!
     @IBOutlet private weak var productNameLabel: UILabel!
@@ -19,13 +18,13 @@ class ProductTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
-        purchaseButton.layer.cornerRadius = purchaseButton.layer.bounds.height / 2
+        purchaseButton.layer.roundToMinimumEdge()
     }
     
     func configureCell(product: ProductModel) {
         categoryLabel.text = product.category
         productNameLabel.text = product.name
-        priceLabel.attributedText = product.price.convertToPrice(currency: "TL", fontSize: 11)
+        priceLabel.attributedText = product.price.convertToPrice(currency: .turkishLiras, fontSize: 11)
         thumbImageView.image(url: product.image.asUrl, placeHolder: UIImage())
     }
         

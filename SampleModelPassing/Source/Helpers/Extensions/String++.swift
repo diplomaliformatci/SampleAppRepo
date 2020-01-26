@@ -15,9 +15,13 @@ extension String {
 }
 
 extension String {
-    func convertToPrice(currency: String, fontSize: CGFloat) -> NSMutableAttributedString {
+    enum CurrencyType: String {
+        case turkishLiras = "TL"
+    }
+    
+    func convertToPrice(currency: CurrencyType, fontSize: CGFloat) -> NSMutableAttributedString {
         let attributedStr = NSMutableAttributedString(string: self + " ")
-        let currencyStr = NSMutableAttributedString(string: currency,
+        let currencyStr = NSMutableAttributedString(string: currency.rawValue,
                                                     attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize, weight: .bold)])
         attributedStr.append(currencyStr)
         return attributedStr
